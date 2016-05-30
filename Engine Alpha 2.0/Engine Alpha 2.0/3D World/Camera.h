@@ -53,7 +53,7 @@ public:
 
 	////////GETTER
 	
-	vec3 getPosition() const;
+	//vec3 getPosition() const;
 	vec3 getLookAt() const;
 	vec3 getUp() const;
 

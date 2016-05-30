@@ -58,6 +58,7 @@ vec3 Camera::getPosition() const
 scale Camera::getScale() const
 {
 	//It does nothing (Camera doesn't have scale).
+	return scale(0, 0, 0);
 }
 
 
@@ -155,10 +156,6 @@ void Camera::untoggleProjectionMatrix()
 }
 
 
-vec3 Camera::getPosition() const
-{
-	return _position;
-}
 
 vec3 Camera::getLookAt() const
 {

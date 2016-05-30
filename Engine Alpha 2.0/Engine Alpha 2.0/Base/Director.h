@@ -22,12 +22,20 @@ public:
 	static void Idle();
 
 	static void Render();
-	static void Update();
+	static void Update(float dt);
 
 	////////control renderer
 	void run();
 	void setMainLoop();
 	void end();
+
+	void setRenderer(Renderer* renderer);
+	void setWorldManager(WorldManager* worldmanager);
+	void setLayerManager(LayerManager* layermanager);
+
+	Renderer* getRenderer() const;
+	WorldManager* getWorldManager() const;
+	LayerManager* getLayerManager() const;
 
 
 	~Director();

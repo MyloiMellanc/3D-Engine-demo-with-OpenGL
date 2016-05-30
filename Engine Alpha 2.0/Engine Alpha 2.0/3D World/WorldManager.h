@@ -16,6 +16,7 @@ public:
 	void addWorld(World* world);
 
 	int findWorldIndex(World* world);
+	int findWorldIndexById(int id);
 
 	void setCurrentWorld(World* world);
 	void setCurrentWorldById(int id);

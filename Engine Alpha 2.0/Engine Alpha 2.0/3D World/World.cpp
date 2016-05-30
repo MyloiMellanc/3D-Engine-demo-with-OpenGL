@@ -42,6 +42,7 @@ void World::addObject(Object* object)
 {
 	assert(object != nullptr);
 
+	object->setCurrentWorld(this);
 	_objectlist.push_back(object);
 }
 
@@ -50,12 +51,13 @@ void World::addObjectWithTag(Object* object, const std::string& tag)
 	assert(object != nullptr);
 
 	object->setTag(tag);
+	object->setCurrentWorld(this);
 	_objectlist.push_back(object);
 }
 
 Object* World::getObjectById(int id)
 {
-	auto object_iterator = std::find_if(_objectlist.begin(), _objectlist.end(), [&](Object* object, int id) {return object->getId() == id;});
+	auto object_iterator = std::find_if(_objectlist.begin(), _objectlist.end(), [&](Object* object) {return object->getId() == id;});
 
 	return *object_iterator;
 }
@@ -123,22 +125,22 @@ void World::closeAllObject()
 
 void World::seeObjectById(int id)
 {
-	std::for_each(_objectlist.begin(), _objectlist.end(), [](Object* object, int id) {if(object->getId() == id)object->setVisible(true);});
+	std::for_each(_objectlist.begin(), _objectlist.end(), [&](Object* object) {if(object->getId() == id)object->setVisible(true);});
 }
 
 void World::closeObjectById(int id)
 {
-	std::for_each(_objectlist.begin(), _objectlist.end(), [](Object* object, int id) {if (object->getId() == id)object->setVisible(false);});
+	std::for_each(_objectlist.begin(), _objectlist.end(), [&](Object* object) {if (object->getId() == id)object->setVisible(false);});
 }
 
 void World::seeAllObjectByTag(const std::string& tag)
 {
-	std::for_each(_objectlist.begin(), _objectlist.end(), [](Object* object, const std::string& tag) {if (object->getTag() == tag)object->setVisible(true);});
+	std::for_each(_objectlist.begin(), _objectlist.end(), [&](Object* object) {if (object->getTag() == tag)object->setVisible(true);});
 }
 
 void World::closeAllObjectByTag(const std::string& tag)
 {
-	std::for_each(_objectlist.begin(), _objectlist.end(), [](Object* object, const std::string& tag) {if (object->getTag() == tag)object->setVisible(false);});
+	std::for_each(_objectlist.begin(), _objectlist.end(), [&](Object* object) {if (object->getTag() == tag)object->setVisible(false);});
 }
 
 void World::setCamera(Camera* camera)
@@ -147,6 +149,7 @@ void World::setCamera(Camera* camera)
 	//assert(_pCurrentcamera != nullptr);
 
 	_pCurrentcamera = camera;
+	_pCurrentcamera->setCurrentWorld(this);
 
 }
 
@@ -159,14 +162,14 @@ void World::update(float dt)
 {
 	_pCurrentcamera->update(dt);
 
-	std::for_each(_objectlist.begin(), _objectlist.end(), [](Object* object, float dt) {object->update(dt);});
+	std::for_each(_objectlist.begin(), _objectlist.end(), [&](Object* object) {object->update(dt);});
 }
 
 void World::draw(Renderer* renderer)
 {
 	_pCurrentcamera->pushMatrix(renderer);
 
-	std::for_each(_objectlist.begin(), _objectlist.end(), [](Object* object, Renderer* renderer) {object->draw(renderer);});
+	std::for_each(_objectlist.begin(), _objectlist.end(), [&](Object* object) {object->draw(renderer);});
 }
 
 

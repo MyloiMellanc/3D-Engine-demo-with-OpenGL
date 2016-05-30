@@ -82,23 +82,19 @@ bool Object::isVisible() const
 	return _visible;
 }
 
-
 vec3 Object::getPosition() const
 {
 	//Override me.
+	return vec3(0, 0, 0);
 }
 
-/*? ? ? Object::getRotation() const
-{
-	//Override me.
-}
-*/
+//virtual ? ? ? getRotation() const;
 
 scale Object::getScale() const
 {
 	//Override me.
+	return scale(0, 0, 0);
 }
-
 
 void Object::update(float dt)
 {
@@ -177,5 +173,5 @@ bool Object::init()
 
 void Object::ActionUpdate(float dt)
 {
-	std::for_each(_actionlist.begin(), _actionlist.end(), [](Action* action, float dt) {action->update(dt);});
+	std::for_each(_actionlist.begin(), _actionlist.end(), [&](Action* action) {action->update(dt);});
 }

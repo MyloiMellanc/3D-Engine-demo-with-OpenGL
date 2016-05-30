@@ -28,12 +28,23 @@ void WorldManager::addWorld(World* world)
 
 int WorldManager::findWorldIndex(World* world)
 {
-	for (int i = 0; i < _Worldlist.size(); i++)
+	for (unsigned int i = 0; i < _Worldlist.size(); i++)
 	{
-		if (_Worldlist[i] == world)
+		if (_Worldlist.at(i) == world)
 			return i;
 	}
 	
+	return -1;
+}
+
+int WorldManager::findWorldIndexById(int id)
+{
+	for (unsigned int i = 0; i < _Worldlist.size(); i++)
+	{
+		if (_Worldlist.at(i)->getId() == id)
+			return i;
+	}
+
 	return -1;
 }
 
@@ -51,9 +62,13 @@ void WorldManager::setCurrentWorld(World* world)
 
 void WorldManager::setCurrentWorldById(int id)
 {
-	assert(id < _Worldlist.size());
+	int world_index = findWorldIndexById(id);
+	int NOT_IN_CONTAINER = -1;
 
-	_pCurrentworld = _Worldlist[id];
+	if (world_index == NOT_IN_CONTAINER)
+		return;
+
+	_pCurrentworld = _Worldlist.at(world_index);
 }
 
 World* WorldManager::getCurrentWorld() const

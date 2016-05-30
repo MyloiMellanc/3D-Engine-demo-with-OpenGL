@@ -3,7 +3,7 @@
 
 #define PROTECT_CONSTRUCTOR_ACCESS protected
 
-#define SAFE_DELETE(instance) do {if(instance) {delete(instance); instance = 0;}} while(nullptr);
+#define SAFE_DELETE(instance) do {if(instance) {delete(instance); instance = nullptr;}} while(0);
 
 
 #endif
