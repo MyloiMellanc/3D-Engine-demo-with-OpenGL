@@ -17,7 +17,7 @@ enum MODEL {
 class Renderer
 {
 public:
-	//static Renderer* create(int argc, char* argv[]);
+	static Renderer* create(int argc, char* argv[]);
 
 	////////from Director , for loops.
 	virtual void Reshape(int width, int height);

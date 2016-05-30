@@ -8,6 +8,7 @@
 class Object;
 class Camera;
 class Renderer;
+class WorldManager;
 
 class World
 {
@@ -53,6 +54,10 @@ public:
 	virtual void draw(Renderer* renderer);
 
 
+	////////manage current world manager
+	void setCurrentWorldManager(WorldManager* worldmanager);
+	WorldManager* getCurrentWorldManager() const;
+
 	~World();
 
 PROTECT_CONSTRUCTOR_ACCESS:
@@ -69,6 +74,8 @@ private:
 	Camera* _pCurrentcamera;
 
 	std::vector<Object*> _objectlist;
+
+	WorldManager* _pCurrentworldmanager;
 };
 
 #endif

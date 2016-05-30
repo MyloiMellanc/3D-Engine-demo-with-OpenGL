@@ -1,5 +1,5 @@
-#ifndef __HEADERS__
-#define __HEADERS__
+#ifndef __HEADER__
+#define __HEADER__
 
 #define NDEBUG 1
 #include <assert.h>

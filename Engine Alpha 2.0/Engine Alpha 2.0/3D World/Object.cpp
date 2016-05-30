@@ -115,6 +115,7 @@ void Object::addAction(Action* action, bool running)
 	assert(action != nullptr);
 	
 	action->setRunning(running);
+	action->setTargetObject(this);
 	_actionlist.push_back(action);
 }
 

@@ -6,6 +6,7 @@
 
 class World;
 class Renderer;
+class Director;
 
 class WorldManager
 {

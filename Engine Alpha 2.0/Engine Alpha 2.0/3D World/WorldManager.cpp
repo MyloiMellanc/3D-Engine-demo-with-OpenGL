@@ -23,6 +23,7 @@ void WorldManager::addWorld(World* world)
 {
 	assert(world != nullptr);
 
+	world->setCurrentWorldManager(this);
 	_Worldlist.push_back(world);
 }
 

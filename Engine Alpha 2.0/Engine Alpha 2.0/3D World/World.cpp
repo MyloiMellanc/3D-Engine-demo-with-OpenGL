@@ -1,6 +1,7 @@
 #include "World.h"
 #include "Object.h"
 #include "Camera.h"
+#include "WorldManager.h"
 #include "../Support/Macro.h"
 #include <assert.h>
 
@@ -172,15 +173,28 @@ void World::draw(Renderer* renderer)
 	std::for_each(_objectlist.begin(), _objectlist.end(), [&](Object* object) {object->draw(renderer);});
 }
 
+void World::setCurrentWorldManager(WorldManager* worldmanager)
+{
+	assert(worldmanager != nullptr);
+
+	_pCurrentworldmanager = worldmanager;
+}
+
+WorldManager* World::getCurrentWorldManager() const
+{
+	return _pCurrentworldmanager;
+}
 
 World::~World()
 {
+	_pCurrentworldmanager->deleteWorld(this);
 	deleteAllObject();
 }
 
 World::World()
 : _id(0)
 , _pCurrentcamera(nullptr)
+, _pCurrentworldmanager(nullptr)
 {
 	_objectlist.clear();
 }

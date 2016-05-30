@@ -46,6 +46,7 @@ void main(int argc, char* argv[])
 
 	Director::getInstance()->setWorldManager(wma1);
 
+
 	
 
 
