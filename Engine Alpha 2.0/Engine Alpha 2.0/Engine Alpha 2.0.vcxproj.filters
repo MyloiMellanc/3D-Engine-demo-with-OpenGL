@@ -93,6 +93,9 @@
     <ClInclude Include="3D World\Action.h">
       <Filter>3D World</Filter>
     </ClInclude>
+    <ClInclude Include="3D World\NullCamera.h">
+      <Filter>3D World</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="3D World\Camera.cpp">
@@ -144,6 +147,9 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="3D World\Action.cpp">
+      <Filter>3D World</Filter>
+    </ClCompile>
+    <ClCompile Include="3D World\NullCamera.cpp">
       <Filter>3D World</Filter>
     </ClCompile>
   </ItemGroup>

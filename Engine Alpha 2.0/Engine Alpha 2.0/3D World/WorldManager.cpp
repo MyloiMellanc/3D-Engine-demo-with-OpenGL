@@ -29,24 +29,28 @@ void WorldManager::addWorld(World* world)
 
 int WorldManager::findWorldIndex(World* world)
 {
+	static const int NOT_IN_CONTAINER = -1;
+
 	for (unsigned int i = 0; i < _Worldlist.size(); i++)
 	{
 		if (_Worldlist.at(i) == world)
 			return i;
 	}
 	
-	return -1;
+	return NOT_IN_CONTAINER;
 }
 
 int WorldManager::findWorldIndexById(int id)
 {
+	static const int NOT_IN_CONTAINER = -1;
+
 	for (unsigned int i = 0; i < _Worldlist.size(); i++)
 	{
 		if (_Worldlist.at(i)->getId() == id)
 			return i;
 	}
 
-	return -1;
+	return NOT_IN_CONTAINER;
 }
 
 void WorldManager::setCurrentWorld(World* world)
@@ -64,7 +68,7 @@ void WorldManager::setCurrentWorld(World* world)
 void WorldManager::setCurrentWorldById(int id)
 {
 	int world_index = findWorldIndexById(id);
-	int NOT_IN_CONTAINER = -1;
+	static const int NOT_IN_CONTAINER = -1;
 
 	if (world_index == NOT_IN_CONTAINER)
 		return;
@@ -126,6 +130,8 @@ void WorldManager::draw(Renderer* renderer)
 WorldManager::~WorldManager()
 {
 	_Worldlist.clear();
+
+	delete _pNullworld;
 }
 
 

@@ -155,7 +155,8 @@ Object::~Object()
 {
 	deleteAllAction();
 
-	_pCurrentworld->deleteObject(this);
+	if(_pCurrentworld != nullptr)
+		_pCurrentworld->deleteObject(this);
 }
 
 Object::Object()

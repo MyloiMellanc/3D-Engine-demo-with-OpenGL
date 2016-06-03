@@ -90,7 +90,8 @@ float Action::getElapsedTime() const
 
 Action::~Action()
 {
-	_pTarget->deleteAction(this);
+	if(_pTarget != nullptr)
+		_pTarget->deleteAction(this);
 }
 
 

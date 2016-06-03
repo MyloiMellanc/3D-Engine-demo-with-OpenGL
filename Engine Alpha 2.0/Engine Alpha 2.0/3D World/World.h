@@ -7,6 +7,7 @@
 
 class Object;
 class Camera;
+class NullCamera;
 class Renderer;
 class WorldManager;
 
@@ -47,6 +48,8 @@ public:
 	////////manage camera
 	void setCamera(Camera* camera);
 	Camera* getCamera() const;
+	void clearCamera();
+
 
 
 	////////command methods
@@ -72,6 +75,7 @@ private:
 	int _id;
 
 	Camera* _pCurrentcamera;
+	NullCamera* _pNullcamera;
 
 	std::vector<Object*> _objectlist;
 

@@ -30,7 +30,7 @@ public:
 	void setVisible(bool visible);
 
 	/*	Command used by external class (especially, Action).
-	*	These virtual method are created not only for Object, Camera used these too.
+	*	These virtual methods are created not only for Object, Camera used these methods too.
 	*	For Camera and Object(Model) can use same Action class.
 	*/
 	////Moving Command for override.
@@ -42,6 +42,9 @@ public:
 	virtual void setScale(const scale& volume);
 	virtual void moveScale(const scale& volume);
 
+
+
+	/////////GETTER
 
 	int getId() const;
 	std::string getTag() const;

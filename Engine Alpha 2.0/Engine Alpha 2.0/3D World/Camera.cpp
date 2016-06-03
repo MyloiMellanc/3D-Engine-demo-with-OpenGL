@@ -200,7 +200,8 @@ mat4 Camera::getProjectionMatrix() const
 
 Camera::~Camera()
 {
-	_pCurrentworld->setCamera(nullptr);
+	if(_pCurrentworld != nullptr)
+		_pCurrentworld->setCamera(nullptr);
 }
 
 

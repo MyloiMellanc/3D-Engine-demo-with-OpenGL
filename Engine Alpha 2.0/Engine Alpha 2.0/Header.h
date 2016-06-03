@@ -5,10 +5,18 @@
 #include <assert.h>
 #include <iostream>
 
+
+//////// Support
+
+#include "Support\cgmath.h"
+#include "Support\Demo Support.h"
+#include "Support\Macro.h"
+
 //////// 3D World
 #include "3D World\Object.h"
 #include "3D World\Action.h"
 #include "3D World\Camera.h"
+#include "3D World\NullCamera.h"
 #include "3D World\World.h"
 #include "3D World\NullWorld.h"
 #include "3D World\WorldManager.h"
@@ -36,10 +44,5 @@
 #include "Base\Director.h"
 
 
-//////// Support
-
-#include "Support\cgmath.h"
-#include "Support\Demo Support.h"
-#include "Support\Macro.h"
 
 #endif

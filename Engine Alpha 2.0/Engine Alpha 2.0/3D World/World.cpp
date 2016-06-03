@@ -1,6 +1,7 @@
 #include "World.h"
 #include "Object.h"
 #include "Camera.h"
+#include "NullCamera.h"
 #include "WorldManager.h"
 #include "../Support/Macro.h"
 #include <assert.h>
@@ -146,8 +147,7 @@ void World::closeAllObjectByTag(const std::string& tag)
 
 void World::setCamera(Camera* camera)
 {
-	//It need more effective one to judge that camera pointer is available.
-	//assert(_pCurrentcamera != nullptr);
+	assert(_pCurrentcamera != nullptr);
 
 	_pCurrentcamera = camera;
 	_pCurrentcamera->setCurrentWorld(this);
@@ -157,6 +157,11 @@ void World::setCamera(Camera* camera)
 Camera* World::getCamera() const
 {
 	return _pCurrentcamera;
+}
+
+void World::clearCamera()
+{
+	_pCurrentcamera = _pNullcamera;
 }
 
 void World::update(float dt)
@@ -187,7 +192,9 @@ WorldManager* World::getCurrentWorldManager() const
 
 World::~World()
 {
-	_pCurrentworldmanager->deleteWorld(this);
+	if(_pCurrentworldmanager != nullptr)
+		_pCurrentworldmanager->deleteWorld(this);
+
 	deleteAllObject();
 }
 
@@ -196,6 +203,11 @@ World::World()
 , _pCurrentcamera(nullptr)
 , _pCurrentworldmanager(nullptr)
 {
+	NullCamera* nullcamera = NullCamera::create();
+	assert(nullcamera != nullptr);
+	_pNullcamera = nullcamera;
+	clearCamera();
+
 	_objectlist.clear();
 }
 
