@@ -72,6 +72,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Jonguk\Desktop\Engine Alpha 2.0\Engine Alpha 2.0\Renderer\OpenGL Library;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -161,10 +162,21 @@
     <ClInclude Include="3D World\WorldManager.h" />
     <ClInclude Include="Base\Director.h" />
     <ClInclude Include="Header.h" />
+    <ClInclude Include="Renderer\Buffer.h" />
+    <ClInclude Include="Renderer\BufferData.h" />
+    <ClInclude Include="Renderer\BufferManager.h" />
+    <ClInclude Include="Renderer\GLSupport.h" />
+    <ClInclude Include="Renderer\OpenGL Library\freeglut.h" />
+    <ClInclude Include="Renderer\OpenGL Library\glew.h" />
+    <ClInclude Include="Renderer\OpenGL Library\wglew.h" />
     <ClInclude Include="Renderer\OpenGLRenderer.h" />
+    <ClInclude Include="Renderer\Program.h" />
+    <ClInclude Include="Renderer\ProgramManager.h" />
+    <ClInclude Include="Renderer\ProgramPipeline.h" />
     <ClInclude Include="Renderer\Renderer.h" />
-    <ClInclude Include="Script\LuaGlueManager.h" />
-    <ClInclude Include="Script\ScriptManager.h" />
+    <ClInclude Include="Renderer\RenderObject.h" />
+    <ClInclude Include="Renderer\Shader.h" />
+    <ClInclude Include="Renderer\ShaderManager.h" />
     <ClInclude Include="Support\cgmath.h" />
     <ClInclude Include="Support\Demo Support.h" />
     <ClInclude Include="Support\Macro.h" />
@@ -184,10 +196,21 @@
     <ClCompile Include="3D World\WorldManager.cpp" />
     <ClCompile Include="Base\Director.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Renderer\Buffer.cpp" />
+    <ClCompile Include="Renderer\BufferData.cpp" />
+    <ClCompile Include="Renderer\BufferManager.cpp" />
     <ClCompile Include="Renderer\OpenGLRenderer.cpp" />
+    <ClCompile Include="Renderer\Program.cpp" />
+    <ClCompile Include="Renderer\ProgramManager.cpp" />
+    <ClCompile Include="Renderer\ProgramPipeline.cpp" />
     <ClCompile Include="Renderer\Renderer.cpp" />
-    <ClCompile Include="Script\LuaGlueManager.cpp" />
-    <ClCompile Include="Script\ScriptManager.cpp" />
+    <ClCompile Include="Renderer\RenderObject.cpp" />
+    <ClCompile Include="Renderer\Shader.cpp" />
+    <ClCompile Include="Renderer\ShaderManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Renderer\OpenGL Library\freeglut.lib" />
+    <Library Include="Renderer\OpenGL Library\glew32.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

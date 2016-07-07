@@ -31,6 +31,12 @@
     <Filter Include="Support">
       <UniqueIdentifier>{94c7c0fc-a983-46f0-bd31-5edf99d1f33b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Renderer\OpenGL Library">
+      <UniqueIdentifier>{ccfd29b2-b520-4bfc-b022-3e40a4acabda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Glue Function">
+      <UniqueIdentifier>{69debe29-3ace-4f53-a7e5-8a80196ead31}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="3D World\Camera.h">
@@ -69,12 +75,6 @@
     <ClInclude Include="Support\cgmath.h">
       <Filter>Support</Filter>
     </ClInclude>
-    <ClInclude Include="Script\LuaGlueManager.h">
-      <Filter>Script</Filter>
-    </ClInclude>
-    <ClInclude Include="Script\ScriptManager.h">
-      <Filter>Script</Filter>
-    </ClInclude>
     <ClInclude Include="Renderer\OpenGLRenderer.h">
       <Filter>Renderer</Filter>
     </ClInclude>
@@ -95,6 +95,45 @@
     </ClInclude>
     <ClInclude Include="3D World\NullCamera.h">
       <Filter>3D World</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Buffer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\BufferData.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\BufferManager.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Program.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\ProgramManager.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\ProgramPipeline.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Shader.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\ShaderManager.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\OpenGL Library\freeglut.h">
+      <Filter>Renderer\OpenGL Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\OpenGL Library\glew.h">
+      <Filter>Renderer\OpenGL Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\OpenGL Library\wglew.h">
+      <Filter>Renderer\OpenGL Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\GLSupport.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\RenderObject.h">
+      <Filter>Renderer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -131,12 +170,6 @@
     <ClCompile Include="Base\Director.cpp">
       <Filter>Base</Filter>
     </ClCompile>
-    <ClCompile Include="Script\LuaGlueManager.cpp">
-      <Filter>Script</Filter>
-    </ClCompile>
-    <ClCompile Include="Script\ScriptManager.cpp">
-      <Filter>Script</Filter>
-    </ClCompile>
     <ClCompile Include="Renderer\OpenGLRenderer.cpp">
       <Filter>Renderer</Filter>
     </ClCompile>
@@ -152,5 +185,40 @@
     <ClCompile Include="3D World\NullCamera.cpp">
       <Filter>3D World</Filter>
     </ClCompile>
+    <ClCompile Include="Renderer\Buffer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\BufferData.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\BufferManager.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\Program.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\ProgramManager.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\ProgramPipeline.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\Shader.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\ShaderManager.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\RenderObject.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Renderer\OpenGL Library\freeglut.lib">
+      <Filter>Renderer\OpenGL Library</Filter>
+    </Library>
+    <Library Include="Renderer\OpenGL Library\glew32.lib">
+      <Filter>Renderer\OpenGL Library</Filter>
+    </Library>
   </ItemGroup>
 </Project>
