@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="3D World">
+      <UniqueIdentifier>{9369edf8-ba74-4cac-993b-3f816d64cdf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2D Layer">
+      <UniqueIdentifier>{472e975c-9a9e-4ebf-9f9b-82875dff1dc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base">
+      <UniqueIdentifier>{472fbc40-51a3-4520-aedd-2402167eeea0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{b8cbeca8-469f-491a-b5f7-0cbe2f379bca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script">
+      <UniqueIdentifier>{68c24c45-e582-46ba-be6c-f1dad5c9bb9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Support">
+      <UniqueIdentifier>{94c7c0fc-a983-46f0-bd31-5edf99d1f33b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer\OpenGL Library">
+      <UniqueIdentifier>{ccfd29b2-b520-4bfc-b022-3e40a4acabda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Script Function">
+      <UniqueIdentifier>{69debe29-3ace-4f53-a7e5-8a80196ead31}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="3D World\Camera.h">
+      <Filter>3D World</Filter>
+    </ClInclude>
+    <ClInclude Include="3D World\NullWorld.h">
+      <Filter>3D World</Filter>
+    </ClInclude>
+    <ClInclude Include="3D World\Object.h">
+      <Filter>3D World</Filter>
+    </ClInclude>
+    <ClInclude Include="3D World\World.h">
+      <Filter>3D World</Filter>
+    </ClInclude>
+    <ClInclude Include="3D World\WorldManager.h">
+      <Filter>3D World</Filter>
+    </ClInclude>
+    <ClInclude Include="2D Layer\Layer.h">
+      <Filter>2D Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="2D Layer\LayerManager.h">
+      <Filter>2D Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="2D Layer\Node.h">
+      <Filter>2D Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="2D Layer\NullLayer.h">
+      <Filter>2D Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="2D Layer\Sprite.h">
+      <Filter>2D Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Director.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Support\cgmath.h">
+      <Filter>Support</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\OpenGLRenderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Renderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Header.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Support\Macro.h">
+      <Filter>Support</Filter>
+    </ClInclude>
+    <ClInclude Include="Support\Demo Support.h">
+      <Filter>Support</Filter>
+    </ClInclude>
+    <ClInclude Include="3D World\Action.h">
+      <Filter>3D World</Filter>
+    </ClInclude>
+    <ClInclude Include="3D World\NullCamera.h">
+      <Filter>3D World</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Buffer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\BufferManager.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Program.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\ProgramManager.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\ProgramPipeline.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Shader.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\ShaderManager.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\OpenGL Library\freeglut.h">
+      <Filter>Renderer\OpenGL Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\OpenGL Library\glew.h">
+      <Filter>Renderer\OpenGL Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\OpenGL Library\wglew.h">
+      <Filter>Renderer\OpenGL Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\GLSupport.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\RenderObject.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Drawing.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\VertexArayObject.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Support\Logger.h">
+      <Filter>Support</Filter>
+    </ClInclude>
+    <ClInclude Include="Script\LuaController.h">
+      <Filter>Script</Filter>
+    </ClInclude>
+    <ClInclude Include="Script\ScriptController.h">
+      <Filter>Script</Filter>
+    </ClInclude>
+    <ClInclude Include="Script\LuaHeader.h">
+      <Filter>Script</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\DrawingManager.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Script\Script Function\LuaFunctionMain.h">
+      <Filter>Script\Script Function</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomClasses.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="3D World\Camera.cpp">
+      <Filter>3D World</Filter>
+    </ClCompile>
+    <ClCompile Include="3D World\NullWorld.cpp">
+      <Filter>3D World</Filter>
+    </ClCompile>
+    <ClCompile Include="3D World\Object.cpp">
+      <Filter>3D World</Filter>
+    </ClCompile>
+    <ClCompile Include="3D World\World.cpp">
+      <Filter>3D World</Filter>
+    </ClCompile>
+    <ClCompile Include="3D World\WorldManager.cpp">
+      <Filter>3D World</Filter>
+    </ClCompile>
+    <ClCompile Include="2D Layer\Layer.cpp">
+      <Filter>2D Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="2D Layer\LayerManager.cpp">
+      <Filter>2D Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="2D Layer\Node.cpp">
+      <Filter>2D Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="2D Layer\NullLayer.cpp">
+      <Filter>2D Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="2D Layer\Sprite.cpp">
+      <Filter>2D Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\Director.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\OpenGLRenderer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\Renderer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3D World\Action.cpp">
+      <Filter>3D World</Filter>
+    </ClCompile>
+    <ClCompile Include="3D World\NullCamera.cpp">
+      <Filter>3D World</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\Buffer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\BufferManager.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\Program.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\ProgramManager.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\ProgramPipeline.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\Shader.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\ShaderManager.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\RenderObject.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\Drawing.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\VertexArayObject.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Support\Logger.cpp">
+      <Filter>Support</Filter>
+    </ClCompile>
+    <ClCompile Include="Script\LuaController.cpp">
+      <Filter>Script</Filter>
+    </ClCompile>
+    <ClCompile Include="Script\ScriptController.cpp">
+      <Filter>Script</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\DrawingManager.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Script\Script Function\LuaFunctionMain.cpp">
+      <Filter>Script\Script Function</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomClasses.cpp">
+      <Filter>헤더 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Renderer\OpenGL Library\freeglut.lib">
+      <Filter>Renderer\OpenGL Library</Filter>
+    </Library>
+    <Library Include="Renderer\OpenGL Library\glew32.lib">
+      <Filter>Renderer\OpenGL Library</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Debug\begin.lua">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\Debug\cube.frag">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\Debug\cube.vert">
+      <Filter>리소스 파일</Filter>
+    </None>
+  </ItemGroup>
+</Project>
